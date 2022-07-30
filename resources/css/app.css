@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    body {
+        overflow: auto;
+    }
+
+    /* ::-webkit-scrollbar {
+        display: none;
+    } */
+
+    .loader_bg {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        background-color: #121720;
+        z-index: 9999;
+        /* transition: opacity 3s, visibility 3s; */
+    }
+
+    .loader_bg::after {
+        content: "";
+        height: 100px;
+        width: 100px;
+        border: 15px solid #d94a11;
+        border-top-color: #ffa500;
+        border-radius: 50%;
+        animation: spin 0.75s ease infinite;
+    }
+
+    @keyframes spin {
+        from{ transform: rotate(0turn) }
+        to{ transform: rotate(1turn) }
+    }
+}
