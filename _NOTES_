@@ -1,3 +1,3 @@
-AFTER CLONING THE PROJECT, RUN THIS COMMAND!
+AFTER CLONING THE PROJECT, RUN THIS COMMAND!!
 
 composer install && npm install && cp .env.example .env && php artisan key:generate && composer dump-autoload
