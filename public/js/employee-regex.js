@@ -115,7 +115,7 @@ const regexp4 = /^[0-9]{11}$/;
 const regexp5 = /^(\d{3})[-](\d{3})[-](\d{3})[-](\d{3})$/;
 const regexp6 = /^(\d{2})[-](\d{9})[-](\d{1})$/;
 const regexp7 = /^[A, B, O,\-\+]+$/gm;
-const regexp8 = /^[0-9]{12}$/;
+const regexp8 = /^[0-9]$/;
 //===================================== ONKEYUP ===========================================//
 // ON KEYUP METHOD FOR SPECIFIC FIELDS
 

@@ -40,7 +40,7 @@ class EmployeeFormValidation extends FormRequest
             'position' => 'required|regex:/^[a-zA-Z\s]*$/',
             'office_id' => 'required',
             'division' => 'required|regex:/^[a-zA-Z\s]*$/',
-            'gsis_no' => 'required|regex:/^[0-9]{12}$/',
+            'gsis_no' => 'required',
             'tin_no' => 'required|regex:/^(\d{3})[-](\d{3})[-](\d{3})[-](\d{3})$/',
             'philhealth' => 'required|regex:/^(\d{2})[-](\d{9})[-](\d{1})$/',
             'blood_type' => 'nullable',

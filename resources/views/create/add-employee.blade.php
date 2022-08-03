@@ -252,7 +252,7 @@
                                                 <label for="gsis_no" class="block text-sm font-medium text-black">
                                                     <span class="text-red-600 text-md">*</span> GSIS No. :
                                                 </label>
-                                                <input type="text" name="gsis_no" id="gsis_no" class="block w-full mt-1 font-medium text-black border-2 border-solid rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" value="{{ old('gsis_no') }}" maxlength="12" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                                                <input type="text" name="gsis_no" id="gsis_no" class="block w-full mt-1 font-medium text-black border-2 border-solid rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" value="{{ old('gsis_no') }}" maxlength="12" minlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
                                                 <span class="py-2 text-sm font-medium text-red-600 errorGSIS2 ">@error('gsis_no') {{ $message }} @enderror</span>
                                                 {{-- MESSAGE VALIDATION --}}
                                                 <span class="py-2 text-sm font-medium text-red-600 errorGSIS" id="errorGSIS"></span>
@@ -278,7 +278,7 @@
                                                 <label for="philhealth" class="block text-sm font-medium text-black">
                                                     <span class="text-red-600 text-md">*</span> PhilHealth :
                                                 </label>
-                                                <input type="text" name="philhealth" id="philhealth" class="block w-full mt-1 font-medium text-black border-2 border-solid rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" value="{{ old('philhealth') }}">
+                                                <input type="text" name="philhealth" id="philhealth" class="block w-full mt-1 font-medium text-black border-2 border-solid rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" value="{{ old('philhealth') }}" maxlength="14" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
                                                 <label class="py-2 text-sm font-medium text-red-600 phLabel" id="phLabel">Format: 00-000000000-0</label>
                                                 <span class="py-2 text-sm font-medium text-red-600 errorPH2 "><br> @error('philhealth') ({{ $message }}) @enderror</span>
                                                 {{-- MESSAGE VALIDATION --}}

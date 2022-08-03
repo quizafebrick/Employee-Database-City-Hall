@@ -11,12 +11,16 @@ document.querySelector('#tin_no').addEventListener('input', function() {
 });
 
 // FOR PHILHEALTH
-document.querySelector('#philhealth').addEventListener('input', function (dash) {
-    var number = dash.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,9})(\d{0,1})/);
-    // CONDITIONAL:
-    // IF SECOND SECTION(NUMBER[2]) IS TRUE, AUTOMATIC DASH IS PLACING BEFORE THE START OF THE SECOND BATCH, ELSE NO DASH.
-    // SAME GOES TO THE THIRD SECTION(NUMBER[3]).
-    dash.target.value = + number[1]
-                        + (number[2] ? `-${number[2]}` : '')
-                        + (number[3] ? `-${number[3]}` : '');
-});
+// document.querySelector('#philhealth').addEventListener('keyup', function (dash) {
+//     var number = dash.target.value.replace(/(\d{2})-?(\d{9})-?(\d{1})/, '$1-$2-$3');
+//     // CONDITIONAL:
+//     // IF SECOND SECTION(NUMBER[2]) IS TRUE, AUTOMATIC DASH IS PLACING BEFORE THE START OF THE SECOND BATCH, ELSE NO DASH.
+//     // SAME GOES TO THE THIRD SECTION(NUMBER[3]).
+//     // dash.target.value = + number[1]
+//     //                     + (number[2] ? `-${number[2]}` : '')
+//     //                     + (number[3] ? `-${number[3]}` : '');
+// });
+
+$("#philhealth").on('keyup', e => {
+    e.target.value = e.target.value.replace(/(\d{2})-?(\d{9})-?(\d{1})/, '$1-$2-$3')
+})
