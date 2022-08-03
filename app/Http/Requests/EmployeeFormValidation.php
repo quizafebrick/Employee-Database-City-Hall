@@ -38,7 +38,7 @@ class EmployeeFormValidation extends FormRequest
             'contact_no' => 'required|regex:/^[0-9]{11}$/',
             'applicant_no' => 'required|regex:/^[0-9]{11}$/',
             'position' => 'required|regex:/^[a-zA-Z\s]*$/',
-            'office_id' => 'required',
+            'office_id' => 'required|',
             'division' => 'required|regex:/^[a-zA-Z\s]*$/',
             'gsis_no' => 'required',
             'tin_no' => 'required|regex:/^(\d{3})[-](\d{3})[-](\d{3})[-](\d{3})$/',
