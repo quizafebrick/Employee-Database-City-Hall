@@ -159,6 +159,11 @@ class SuperAdmin extends Controller
         $employees = Employee::where('employee_no', '=', $requests)->first();
         // dd($employees);
 
+        if ($employees == null)
+        {
+           return back()->with('error', "There's no record with that QR Code");
+        }
+
         if ($requests == false)
         {
             return response()->json(['status' => 400]);
