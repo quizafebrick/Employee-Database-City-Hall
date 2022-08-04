@@ -54,5 +54,7 @@
 <script src="{{ asset('js/error-message.js') }}"></script>
 {{-- EMPLOYEE REGEX VALIDATION --}}
 <script src="{{ asset('js/employee-regex.js') }}"></script>
+{{-- DROPDOWN --}}
+<script src="{{ asset('js/dropdown-menu.js') }}"></script>
 
 @include('superadmin.partial.footer')

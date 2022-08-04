@@ -26,13 +26,15 @@ return new class extends Migration
             $table->string('contact_no');
             $table->string('applicant_no');
             $table->string('position');
-            $table->foreignId('office_id')->constrained('offices')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->unsignedBigInteger('office_id');
+            $table->foreign('office_id')->references('id')->on('offices')->onUpdate('cascade')->onDelete('cascade');
             $table->string('division');
             $table->string('gsis_no');
             $table->string('tin_no');
             $table->string('philhealth');
             $table->string('blood_type')->nullable();
-            $table->foreignId('detailed_office_id')->constrained('detailed_offices')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->unsignedBigInteger('detailed_office_id');
+            $table->foreign('detailed_office_id')->references('id')->on('detailed_offices')->onUpdate('cascade')->onDelete('cascade');
             $table->string('link_token')->unique();
             $table->string('emp_token')->unique();
             $table->string('_token')->nullable();
