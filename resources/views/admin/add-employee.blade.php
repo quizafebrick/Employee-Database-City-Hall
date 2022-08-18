@@ -7,7 +7,7 @@
 
         {{-- ERROR MESSAGE --}}
         @if (session()->has('error'))
-            <div class="fixed px-4 py-3 mt-1 ml-4 text-white bg-red-600 shadow-md text-md rounded-lg" id="error" role="alert" style="z-index: 99">
+            <div class="fixed px-4 py-3 mt-1 ml-4 text-white bg-red-600 rounded-lg shadow-md text-md" id="error" role="alert" style="z-index: 99">
                 <div class="flex">
                     <div class="py-1 text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -22,7 +22,7 @@
         @endif
 
         @if ($errors->any())
-            <div class="fixed px-4 py-3 mt-1 ml-4 text-white bg-red-600 shadow-md text-md rounded-lg" id="error" role="alert" style="z-index: 99; background-color:#7f1d1d">
+            <div class="fixed px-4 py-3 mt-1 ml-4 text-white bg-red-600 rounded-lg shadow-md text-md" id="error" role="alert" style="z-index: 99; background-color:#7f1d1d">
                 <div class="flex">
                     <div class="py-1 text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -43,7 +43,7 @@
                     <h1 class="pt-5 text-4xl font-bold text-center underline font-robotoBold">Add Employee</h1>
                 </div>
                 {{-- ADD EMPLOYEE FORM --}}
-                <form class="mt-6" id="add_employee" method="POST" action="{{ route('store.save-employee') }}" autocomplete="off">
+                <form class="mt-6" id="add_employee" method="POST" action="{{ route('admin.save-employee') }}" autocomplete="off">
                     @csrf
                     {{-- FIRST FORM --}}
                     <div class="px-10 sm:mt-0">

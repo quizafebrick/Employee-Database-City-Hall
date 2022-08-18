@@ -7,7 +7,7 @@
 
         {{-- ERROR MESSAGE --}}
         @if (session()->has('error'))
-            <div class="fixed px-4 py-3 mt-1 ml-4 text-white bg-red-600 shadow-md text-md rounded-lg" id="error" role="alert" style="z-index: 99">
+            <div class="fixed px-4 py-3 mt-1 ml-4 text-white bg-red-600 rounded-lg shadow-md text-md" id="error" role="alert" style="z-index: 99">
                 <div class="flex">
                     <div class="py-1 text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -22,7 +22,7 @@
         @endif
 
         @if ($errors->any())
-            <div class="fixed px-4 py-3 mt-1 ml-4 text-white bg-red-600 shadow-md text-md rounded-lg" id="error" role="alert" style="z-index: 99; background-color:#7f1d1d">
+            <div class="fixed px-4 py-3 mt-1 ml-4 text-white bg-red-600 rounded-lg shadow-md text-md" id="error" role="alert" style="z-index: 99; background-color:#7f1d1d">
                 <div class="flex">
                     <div class="py-1 text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -102,10 +102,10 @@
                                                 {{-- CHECKBOX --}}
                                                 <div class="flex items-center justify-center">
                                                     <input id="checkBoxMiddlename" name="checkBoxMiddlename" type="checkbox" class="w-4 h-4 text-indigo-600 border-gray-300 rounded cursor-pointer focus:ring-indigo-500" value="&mdash;">
-                                                    <label for="remember-me" class="ml-2 text-sm font-semibold text-red-600 font-robotoBold md:flex hidden">
+                                                    <label for="remember-me" class="hidden ml-2 text-sm font-semibold text-red-600 font-robotoBold md:flex">
                                                         If Middle name is Not Applicable (N/A)
                                                     </label>
-                                                    <label for="remember-me" class="ml-2 text-sm font-semibold text-red-600 font-robotoBold md:hidden flex">
+                                                    <label for="remember-me" class="flex ml-2 text-sm font-semibold text-red-600 font-robotoBold md:hidden">
                                                        Middlename N/A
                                                     </label>
                                                 </div>
@@ -269,7 +269,7 @@
                                                 <label for="gsis_no" class="block text-sm font-medium text-black">
                                                     <span class="text-red-600 text-md">*</span> GSIS No. :
                                                 </label>
-                                                <input type="text" name="gsis_no" id="gsis_no" class="block w-full mt-1 font-medium text-black border-2 border-solid rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" value="{{ old('gsis_no') }}" minlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                                                <input type="text" name="gsis_no" id="gsis_no" class="block w-full mt-1 font-medium text-black border-2 border-solid rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" value="{{ old('gsis_no') }}" maxlength="12" minlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
                                                 <span class="py-2 text-sm font-medium text-red-600 errorGSIS2 ">@error('gsis_no') {{ $message }} @enderror</span>
                                                 {{-- MESSAGE VALIDATION --}}
                                                 <span class="py-2 text-sm font-medium text-red-600 errorGSIS" id="errorGSIS"></span>
